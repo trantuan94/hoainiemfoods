@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+         {{ cspMeta() }}
+		<title>Hoài Niệm Foods - ZBeeGroup</title>
+
+ 		<!-- Google font -->
+ 		{{ style('https://fonts.googleapis.com/css?family=Montserrat:400,500,700') }}
+
+ 		<!-- Bootstrap -->
+        {{ style('css/bootstrap.min.css') }}
+
+ 		<!-- Slick -->
+ 		{{ style('css/slick.css') }}
+ 		{{ style('css/slick-theme.css') }}
+
+ 		<!-- nouislider -->
+ 		{{ style('css/nouislider.min.css') }}
+
+ 		<!-- Font Awesome Icon -->
+ 		{{ style('css/font-awesome.min.css') }}
+
+ 		<!-- Custom stlylesheet -->
+        {{ style('css/style.css') }}
+        @section('after-styles')
+        @endsection
+
+ 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+ 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+ 		<!--[if lt IE 9]>
+ 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+ 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+ 		<![endif]-->
+
+    </head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			{{--  @include('web.partials.top_header')  --}}
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			@include('web.partials.main_header')
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+		<div id="content" style="margin-top: 12em;">
+			@section('content')
+			
+			@endsection
+		</div>
+
+		<!-- NEWSLETTER -->
+		@include('web.partials.newsletter')
+		<!-- /NEWSLETTER -->
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			@include('web.partials.top_footer')
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			{{--  @include('web.partials.bottom_footer')  --}}
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
+
+		<!-- jQuery Plugins -->
+        {{ script('js/jquery.min.js') }}
+        {{ script('js/bootstrap.min.js') }}
+        {{ script('js/slick.min.js') }}
+        {{ script('js/nouislider.min.js') }}
+        {{ script('js/jquery.zoom.min.js') }}
+        {{ script('js/main.js') }}
+        @section('after-scripts')
+        @endsection
+	</body>
+</html>

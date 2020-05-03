@@ -1,0 +1,22 @@
+<!-- NAVIGATION -->
+<nav id="navigation">
+    <!-- container -->
+    <div class="container">
+        <!-- responsive-nav -->
+        <div id="responsive-nav">
+            <!-- NAV -->
+            <ul class="main-nav nav navbar-nav">
+                <li class="{{currentUrl.indexOf('/home') == 0 ? 'active' : '' }}"><a href="{{route('home-page')}}"><i class="fa fa-home"></i>&nbsp;Trang chủ</a></li>
+                <li class="{{currentUrl.indexOf('/top-selling') == 0 ? 'active' : '' }}"><a href="{{ route('top-selling') }}">Hàng bán chạy</a></li>
+                @each(category in categories)
+                <li class="{{ currentUrl.indexOf('/category/'+ category.slug) != -1 ? 'active' : '' }}"><a href="{{ route('detail-category', {slug: category.slug}) }}">{{category.name}}</a></li>
+                @endeach
+            </ul>
+
+            <!-- /NAV -->
+        </div>
+        <!-- /responsive-nav -->
+    </div>
+    <!-- /container -->
+</nav>
+<!-- /NAVIGATION -->
