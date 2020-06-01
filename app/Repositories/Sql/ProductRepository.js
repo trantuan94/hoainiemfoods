@@ -10,5 +10,13 @@ class ProductRepository extends BaseRepository {
   get searchable () {
     return ['code', 'name', 'slug', 'category_id', 'inventory_state', 'price']
   }
+
+  async getNewProducts (options) {
+
+  }
+
+  async getHotSaleProducts (options) {
+
+  }
 }
 module.exports = ProductRepository

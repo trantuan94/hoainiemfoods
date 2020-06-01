@@ -14,6 +14,7 @@ class ProductsSchema extends Schema {
         .references('id').on('categories').onDelete('cascade')
         .index('products_category_id_index')
       table.float('price').unsigned()
+      table.integer('topsell').default(0);
       table.text('description').nullable();
       table.string('inventory_state', 20).default('instock').comment('tình trạng tồn kho')
       table.timestamps()

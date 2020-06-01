@@ -5,6 +5,8 @@
   "description": "The fullstack application boilerplate for Adonisjs",
   "main": "index.js",
   "scripts": {
+    "dev-admin": "vue-cli-service serve",
+    "build-admin": "vue-cli-service build",
     "start": "node server.js",
     "test": "node ace test"
   },

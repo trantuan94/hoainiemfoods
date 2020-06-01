@@ -18,97 +18,64 @@ class ProductSeeder {
     let products = [
       {
         code: 'P20-0001',
-        name: 'Mì gạo 500g',
-        description: 'Product 1',
+        name: 'Bún Thập Niên 70',
+        description: 'Bún Thập Niên 70',
         price: 30000,
         category_id: 1,
         inventory_state: 'instock'
       },
       {
         code: 'P20-0002',
-        name: 'Product 2',
-        description: 'Product 2',
-        price: 60000,
-        category_id: 1,
+        name: 'Thạch đen Hoài Niệm 300g',
+        description: 'Thạch Đen Hoài Niệm với nguyên liệu chính từ cây Sương Sáo, vừa ngon, vừa mát thì trong đông y có rất nhiều tác dụng tốt cho sức khỏe như thanh nhiệt, giải độc, hạ huyết áp, mát gan, giảm bớt đau nhức cơ ..vv',
+        price: 10000,
+        category_id: 3,
         inventory_state: 'instock'
       },
       {
         code: 'P20-0003',
-        name: 'Product 3',
-        description: 'Product 3',
+        name: 'Thạch đen Hoài Niệm 600g',
+        description: `Thạch Đen Hoài Niệm với nguyên liệu chính từ cây Sương Sáo, vừa ngon, vừa mát thì trong đông y có rất nhiều tác dụng tốt cho sức khỏe như thanh nhiệt, giải độc, hạ huyết áp, mát gan, giảm bớt đau nhức cơ ..vv`,
+        category_id: 3,
+        inventory_state: 'instock'
+      },
+      {
+        code: 'P20-0004',
+        name: 'Phở Hoài Niệm',
+        description: 'Phở Hoài Niệm',
         price: 50000,
         category_id: 1,
         inventory_state: 'instock'
       },
       {
-        code: 'P20-0004',
-        name: 'Miến rong Cao Bằng 1kg',
-        description: 'Product 1',
-        price: 120000,
-        category_id: 1,
-        inventory_state: 'instock'
-      },
-      {
         code: 'P20-0005',
-        name: 'Măng khô Bắc Kan 500g',
-        description: 'Product 1',
+        name: 'Mắm Tôm Hoài Niệm',
+        description: 'Mắm Tôm Hoài Niệm',
         price: 100000,
         category_id: 2,
         inventory_state: 'instock'
       },
       {
         code: 'P20-0006',
-        name: 'Mắm tôm Hạ Long 400g',
-        description: 'Product 1',
+        name: 'Mắm tôm Hương Biển',
+        description: 'Mắm tôm Hương Biển',
         price: 50000,
-        category_id: 3,
+        category_id: 2,
         inventory_state: 'instock'
       },
       {
         code: 'P20-0007',
-        name: 'Product 7',
-        description: 'Product 7',
+        name: 'Mắm Tép Hoài Niệm',
+        description: 'Mắm Tép Hoài Niệm',
         price: 30000,
-        category_id: 3,
+        category_id: 2,
         inventory_state: 'instock'
       },
       {
         code: 'P20-0008',
-        name: 'Product 8',
-        description: 'Product 8',
+        name: 'Mắm Tép Hương Biển',
+        description: 'Mắm Tép Hương Biển',
         price: 50000,
-        category_id: 2,
-        inventory_state: 'instock'
-      },
-      {
-        code: 'P20-0009',
-        name: 'Product 9',
-        description: 'Product 9',
-        price: 30000,
-        category_id: 3,
-        inventory_state: 'instock'
-      },
-      {
-        code: 'P20-0010',
-        name: 'Product 10',
-        description: 'Product 10',
-        price: 30000,
-        category_id: 2,
-        inventory_state: 'instock'
-      },
-      {
-        code: 'P20-0011',
-        name: 'Product 11',
-        description: 'Product 11',
-        price: 30000,
-        category_id: 3,
-        inventory_state: 'instock'
-      },
-      {
-        code: 'P20-0012',
-        name: 'Product 12',
-        description: 'Product 12',
-        price: 30000,
         category_id: 2,
         inventory_state: 'instock'
       }

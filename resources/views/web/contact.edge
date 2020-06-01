@@ -1,0 +1,63 @@
+@layout('web.layouts.app')
+@section('content')
+<div class="section">
+  <!-- container -->
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+              <h3 class="title">Liên hệ & hợp tác</h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4 class="title">Thân mến chào tất cả các bạn!</h4>
+          <p> 
+            <b>Hoài Niệm Foods & Farms</b> liên tục tuyển Đại Lý & CTV cho các dòng sản phẩm.
+          </p>
+          <p>
+            Hiện nay do nhu cầu phát triển thị trường khu vực các tỉnh phía bắc, chúng tôi liên tục tuyển Nhà phân phối, đại lý, CTV các tỉnh.
+          </p>
+          
+          <p>
+            Rất mong được hợp tác & đồng hành của các bạn. Cùng nhau chung tay đưa các sản phẩm ngon, chất lượng tốt, an toàn vệ sinh thực phẩm & an lành đến tay người tiêu dùng.
+          </p>
+          <p>
+            Mọi thông tin liên hệ & chính sách cho NPP/Đại Lý/CTV hoặc phẩn hồi, góp ý của quý khách hàng xin vui lòng liên hệ:
+          </p>
+          <p>
+            <b>CÔNG TY CỔ PHẦN ZBEEGROUP</b>
+          </p>
+          <p>
+            Email: <a>hoainiemfoods@gmail.com</a> | <a>zbeegroup@gmail.com</a>
+          </p>
+          <p>
+            Hotline: 0357.031.648
+          </p>
+          <br>
+          <p>
+            Trân trọng cảm ơn!
+          </p>
+        </div>
+        <div class="col-md-6">
+          <form class="form form-horizontal" method="POST" action="#">
+            <div class="form-group">
+              <input class="form-control" required name="fullname" type="text" placeholder="Họ & tên" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" required name="phone"" type="text" placeholder="Số điện thoại" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="email" type="text" placeholder="Địa chỉ e-mail" />
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" required name="content" id="contact-content" cols="30" rows="5" placeholder="Nội dung trao đổi"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn primary-btn pull-right"><i class="fa fa-paper-plane"></i>&emsp;Gửi</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+@endsection

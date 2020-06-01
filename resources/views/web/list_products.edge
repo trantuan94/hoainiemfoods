@@ -1,0 +1,36 @@
+@layout('web.layouts.app')
+@section('content')
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div id="store" class="col-md-12">
+                <!-- store top filter -->
+                @include('web.partials.sort_and_show')
+                <!-- /store top filter -->
+
+                <!-- store products -->
+                @each(product in products.data)
+                @if($loop.first || ($loop.index + 1) % 4 === 0)
+                  <div class="row">
+                @endif
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                      @!component('web.partials.product.grid_item', product= product)
+                  </div>
+                @if(($loop.index + 1) % 4 === 0 || $loop.last)
+                  </div>
+                @endif
+                @endeach
+                <!-- /store products -->
+
+                <!-- store bottom filter -->
+                @component('web.partials.pagination', total=product.total, page=products.page, lastPage= products.lastPage, pages= genListPages(products.lastPage))
+                @endcomponent
+                <!-- /store bottom filter -->
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+    @include('web.partials.sections.topselling_hor_section')
+@endsection
