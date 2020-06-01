@@ -10,4 +10,17 @@ hooks.after.providersBooted(() => {
   View.global('isActivedLink', (link) => {
 
   })
+
+  View.global('showPrice', (price) => {
+    return String(parseInt(price) || 0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+  })
+
+  View.global('genListPages', (lastPage) => {
+    let pages = [];
+    for (let pageNum = 1; pageNum <= lastPage; pageNum++) {
+      pages.push(pageNum);
+    }
+
+    return pages;
+  })
 })

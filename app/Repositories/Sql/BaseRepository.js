@@ -591,6 +591,10 @@ class BaseRepository {
     return this._query.select(this._appendTableName(columns)).fetch()
   }
 
+  first (columns = '*') {
+    return this._query.select(this._appendTableName(columns)).first()
+  }
+
   /**
    * Count result of query
    *

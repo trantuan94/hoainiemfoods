@@ -1,0 +1,30 @@
+<div class="store-filter clearfix">
+  <span class="store-qty">Hiển thị sản phẩm</span>
+  <ul class="store-pagination">
+      @if(page > 1)
+        <li><a href="{{url + '?page=1' }}"><i class="fa fa-angle-left"></i></a></li>
+      @endif
+      @if(pages.length > 2)
+        <li class="{{ 1 === page ? 'active' : ''}}"><a href="{{ url + '?page=1' }}">1</a></li>
+        @if(page - 3 > 1)
+        ....
+        @endif
+        @each(pageNum in pages)
+          @if(pageNum > 1 && pageNum < lastPage && pageNum >= (page - 1) && pageNum <= (page + 1))
+          <li class="{{ pageNum === page ? 'active' : ''}}"><a href="{{ url + '?page=' + pageNum }}">{{pageNum}}</a></li>
+          @endif
+        @endeach
+        @if(page + 2 < lastPage)
+        ....
+        @endif
+        <li class="{{ lastPage === page ? 'active' : ''}}"><a href="{{ url + '?page=' + lastPage }}">{{lastPage}}</a></li>
+      @else
+        @each(pageNum in pages)
+          <li class="{{ pageNum === page ? 'active' : ''}}"><a href="{{ url + '?page=' + pageNum }}">{{pageNum}}</a></li>
+        @endeach
+      @endif
+      @if(page < lastPage)
+        <li><a href="{{url + '?page=' + lastPage }}"><i class="fa fa-angle-right"></i></a></li>
+      @endif
+  </ul>
+</div>

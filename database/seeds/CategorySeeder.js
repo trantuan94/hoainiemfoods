@@ -18,20 +18,20 @@ class CategorySeeder {
   async run () {
     let categories = [
       {
-        name: 'Mỳ-Miến',
+        name: 'Mì-Phở',
         type: 'product',
         status: 'actived'
       },
       {
-        name: 'Nấm-măng',
+        name: 'Mắm-Tương',
         type: 'product',
         status: 'actived'
       },
       {
-        name: 'Mắm-tương',
+        name: 'Thạch',
         type: 'product',
         status: 'actived'
-      }
+      },
     ];
     for (let cat of categories) {
       await Category.create(cat);

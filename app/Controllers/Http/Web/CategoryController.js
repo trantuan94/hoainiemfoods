@@ -13,17 +13,20 @@ class CategoryController {
     try {
       let slug = params.slug
       if (!slug) {
-        return view.render('web.errors.404', {categories})
+        return view.render('web.errors.404')
       }
-      let category = await this.categoryRepository.findBy('slug', slug)
+      const category = await this.categoryRepository.findBy('slug', slug)
       if (!category) {
-        return view.render('web.errors.404', {categories})
+        return view.render('web.errors.404')
       }
-      let { page = 1, perPage = 9 } = request.all()
-      let products = await this.productRepository.where({ category_id: category.id })
+      const { page = 1, perPage = 9 } = request.all()
+      const products = await this.productRepository.newQuery().with('category').with('images').applyScope().where({ category_id: category.id })
         .paginate(page, perPage)
+      const topSellProducts = await Cache.remember('topsell_products', 7, async () => {
+        return await this.productRepository.newQuery().with('category').with('images').applyScope().where({topsell: 1}).limit(6).all()
+      })
 
-      return view.render('web.category', { products: products.toJSON() })
+      return view.render('web.category', { category: category.toJSON(), products: products.toJSON(), topSellProducts })
     } catch (err) {
       console.log('err', err)
       return view.render('web.errors.500')
